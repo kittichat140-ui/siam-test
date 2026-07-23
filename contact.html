@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก - บริษัทสยามไดมอนด์ แพคเกจจิ้งแอนด์เทคโนโลยี จำกัด</title>
+    
+    <!-- นำเข้าฟอนต์ภาษาไทย Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS จากไฟล์ navbar.php -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* บังคับใช้ฟอนต์ภาษาไทยทั้งหน้าเว็บ */
+        body { font-family: 'Kanit', sans-serif; }
+        
+        /* Navbar */
+        .navbar-nav .nav-link { display: inline-block; transition: 0.2s; color: #495057 !important; position: relative; padding-bottom: 6px !important; }
+        .navbar-nav .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 3px; background-color: #E52521; transition: 0.3s; transform: translateX(-50%); }
+        .navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after { width: 100%; }
+        .navbar-nav .nav-link.active { color: #E52521 !important; font-weight: bold; }
+
+        /* Breadcrumb */
+        .breadcrumb-banner { background: linear-gradient(90deg, #83aff1 0%, #e6eef9 100%); padding: 15px 0; border-bottom: 1px solid #deebf7; }
+        .custom-breadcrumb { display: flex; align-items: center; list-style: none; padding: 0; margin: 0; }
+        .breadcrumb-item-pill { background: #ffffff; border-radius: 30px; padding: 5px 15px; box-shadow: 0 2px 8px rgba(26, 71, 124, 0.08); display: inline-flex; align-items: center; border: 1px solid #e1e8f0; }
+        .breadcrumb-item-pill a { color: #1a477c; text-decoration: none; font-size: 14px; font-weight: 500; }
+        .breadcrumb-item-pill a i { margin-right: 6px; font-size: 13px; }
+        .breadcrumb-item-separator { color: #8898aa; margin: 0 12px; font-size: 11px; }
+        .breadcrumb-item-active { color: #2c3e50; font-size: 14px; font-weight: 600; }
+
+        /* Contact Details */
+        .text-siam { color: #E52521; }
+        .bg-section-gray { background-color: #F8F9FA; padding: 60px 0 120px 0; }
+        .contact-title { font-size: 2.2rem; font-weight: 700; color: #2c3e50; margin-bottom: 10px; }
+        .contact-info-block { background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 35px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); height: 100%; }
+        .contact-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .contact-item:last-child { margin-bottom: 0; }
+        .contact-icon { font-size: 1.2rem; color: #E52521; margin-right: 15px; margin-top: 4px; width: 25px; text-align: center; }
+        .contact-text strong { display: block; color: #2c3e50; font-size: 1.05rem; margin-bottom: 4px; }
+        .contact-text p { color: #6c757d; margin-bottom: 0; line-height: 1.6; }
+        .map-container { border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); height: 450px; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+    </style>
+</head>
+<body class="hold-transition layout-top-nav">
+<div class="wrapper">
+
+    <!-- 1. ส่วนแถบเมนูด้านบน (Navbar) -->
+    <nav class="main-header navbar navbar-expand-lg navbar-white bg-white border-bottom-0" style="min-height: 75px;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="image/logo.png" alt="Siam Diamond Logo" class="brand-image" style="opacity:.8; max-height: 33px; margin-right: 10px;">
+                <div class="d-flex flex-column">
+                    <span class="brand-text font-weight-light" style="font-size: 14px; line-height: 1.2;">บริษัทสยามไดมอนด์ แพคเกจจิ้งแอนด์เทคโนโลยี จำกัด</span>
+                    <span class="brand-text font-weight-light" style="font-size: 12px; line-height: 1.2;">SIAM DIAMOND PACKAGING AND TECHNOLOGY CO., LTD.</span>
+                </div>
+            </a>
+            
+            <!-- ปุ่ม Hamburger สำหรับตอนดูบนมือถือ -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin: 0 5px;"><a href="index.html" class="nav-link"><span>หน้าหลัก</span></a></li>
+                    <li class="nav-item" style="margin: 0 5px;"><a href="about.html" class="nav-link "><span>เกี่ยวกับเรา</span></a></li>
+                    <li class="nav-item" style="margin: 0 5px;"><a href="catalog.html" class="nav-link"><span>สินค้า / เครื่องบรรจุภัณฑ์</span></a></li>
+                    <li class="nav-item" style="margin: 0 5px;"><a href="service.html" class="nav-link"><span>บริการหลังการขาย</span></a></li>
+                    <li class="nav-item" style="margin: 0 5px;"><a href="contact.html" class="nav-link active"><span>ติดต่อ</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="breadcrumb-banner">
+            <div class="container">
+                <ol class="custom-breadcrumb">
+                    <li class="breadcrumb-item-pill"><a href="index.html"><i class="fas fa-home"></i> หน้าแรก</a></li>
+                    <li class="breadcrumb-item-separator"><i class="fas fa-chevron-right"></i></li>
+                    <li class="breadcrumb-item-active">ติดต่อ</li>
+                </ol>
+            </div>
+        </div>
+
+        <section class="bg-section-gray">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1 class="contact-title">ติดต่อ</h1>
+                    <div class="mx-auto" style="width: 50px; height: 3px; background-color: #E52521;"></div>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps?q=บริษัทสยามไดมอนด์+แพคเกจจิ้งแอนด์เทคโนโลยี+จำกัด&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="contact-info-block">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">
+                                    <strong>ที่อยู่บริษัท</strong>
+                                    <p>198/16 หมู่ที่ 7 ตำบล อ้อมน้อย อำเภอกระทุ่มแบน สมุทรสาคร 74130</p>
+                                </div>
+                            </div>
+                            <hr class="my-4" style="border-color: #eee;">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-text">
+                                    <strong>เบอร์โทรศัพท์</strong>
+                                    <p><a href="tel:+660818935589" class="text-decoration-none text-secondary">+66-0818935589</a></p>
+                                </div>
+                            </div>
+                            <hr class="my-4" style="border-color: #eee;">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <strong>อีเมล</strong>
+                                    <p><a href="mailto:siamdiamond5589@gmail.com" class="text-decoration-none text-secondary">siamdiamond5589@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <hr class="my-4" style="border-color: #eee;">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                                <div class="contact-text">
+                                    <strong>เวลาทำการ</strong>
+                                    <p>จันทร์-เสาร์ - 08.00-17.00 น.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="background: #ffffff; padding: 20px 0; border-top: 1px solid #eee;">
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7 mb-2 mb-md-0">
+                        ลิขสิทธิ์ © 2026 สงวนลิขสิทธิ์ <strong>บริษัท สยามไดมอนด์แพคเกจจิ้งแอนด์เทคโนโลยี จำกัด</strong>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
